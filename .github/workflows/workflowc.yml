@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["pingW"]
+    repo: ozzShpigel/actions-remote-dispatch-a
+    branches: [main]
+    types: [completed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "repo b"
